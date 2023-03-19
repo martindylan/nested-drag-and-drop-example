@@ -1,0 +1,53 @@
+.DroppableList {
+  background: white;
+  border: 1px solid gray;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  border-radius: 0.5rem;
+  width: 24ch;
+  height: 50vh;
+  transition: 100ms;
+  outline: 4px solid transparent;
+}
+
+.isDraggingOver {
+  outline: 4px solid lightblue;
+}
+
+.title {
+  color: black;
+  text-align: center;
+  user-select: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0.25rem;
+  padding-right: 0.25rem;
+  padding-left: calc(0.25rem + 12px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: darkgray lightgray;
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid white;
+    background-color: lightgray;
+  }
+}
