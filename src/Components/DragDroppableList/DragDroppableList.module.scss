@@ -1,44 +1,50 @@
-.DroppableList {
+.DragDroppableList {
   background: white;
   border: 1px solid gray;
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  width: max-content;
   border-radius: 0.5rem;
   width: 24ch;
-  height: 50vh;
-  transition: 100ms;
-  outline: 4px solid transparent;
-}
+  margin: 0 0.25rem;
 
-.isDraggingOver {
-  outline: 4px solid lightblue;
+  &.isDragging {
+    opacity: 0.4;
+  }
 }
 
 .title {
   color: black;
   text-align: center;
   user-select: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  margin: 1rem 0;
+  padding: 0.25rem 0 1rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  margin: 0.25rem;
-  padding-right: 0.25rem;
-  padding-left: calc(0.25rem + 12px);
+  padding-left: 9px;
+  padding-right: 3px;
+  margin: 0.5rem 6px;
   overflow-x: hidden;
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: darkgray lightgray;
   height: 100%;
+  border-radius: 0.25rem;
+  outline: 4px solid transparent;
+  transition-duration: 200ms;
+
+  &.isDraggingOver {
+    outline: 4px solid lightblue;
+  }
 
   &::-webkit-scrollbar {
-    width: 12px;
+    width: 6px;
   }
 
   &::-webkit-scrollbar-track {
@@ -47,7 +53,7 @@
 
   &::-webkit-scrollbar-thumb {
     border-radius: 20px;
-    border: 3px solid white;
+    // border: 3px solid white;
     background-color: lightgray;
   }
 }
