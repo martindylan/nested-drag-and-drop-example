@@ -1,3 +1,3 @@
-# testdragdrop
+# nested drag-and-drop example
 
-Listas con items dragdropeables en React con [@hello-pangea/dnd](https://github.com/hello-pangea/dnd).
+Responsive nested drag-and-drop example built with [@hello-pangea/dnd](https://github.com/hello-pangea/dnd).
